@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>Greetings Master</title>
+
+</head>
+
+<body>
+<p id="hour"></p>
+<p id="greet"></p>
+<p id="minutes"></p>
+<button onclick="my_function()">Click</button>
+
+<script>
+var time1=new Date() .getMinutes() 
+document.getElementById("minutes") .innerHTML=time1
+
+function my_function() {
+    var greetings
+    var time=new Date() .getHours() 
+    
+    
+    if(time<12) {
+        greetings="Good Morning Master"
+    }
+    else if (time<5) {
+        greeting="Good Afternoon Master"
+    }
+    else if (time<21) {
+         greetings="Good Evening Master"
+    }
+    else {
+        greetings="Good Night Master"
+    }
+    document.getElementById("hour") .innerHTML="The Time is " + time
+    document.getElementById("greet") .innerHTML=greetings
+}
+
+</script>
+
+</body>
